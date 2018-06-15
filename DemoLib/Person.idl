@@ -1,0 +1,14 @@
+namespace DemoLib
+{
+    [default_interface]
+    runtimeclass Person 
+    {
+		Person();
+		Person(String name);
+
+		String Name{ get; };
+        Int32 Age;
+
+		String ToString();
+    }
+}

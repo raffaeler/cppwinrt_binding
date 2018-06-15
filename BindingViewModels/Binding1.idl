@@ -1,0 +1,15 @@
+import "MainViewModel.idl";
+
+namespace BindingViewModels
+{
+    [default_interface]
+    runtimeclass Binding1 : Windows.UI.Xaml.Controls.Page, Windows.UI.Xaml.Data.INotifyPropertyChanged
+    {
+        Binding1();
+
+		//Int32 Test1{ get; };
+		//String Test2{ get; };
+
+		MainViewModel ViewModel{ get; };
+	}
+}

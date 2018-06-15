@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="BindingViewModels.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BindingViewModels"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <Style x:Key="buttonStyle1" TargetType="Button">
+            <Setter Property="MinWidth" Value="100" />
+            <Setter Property="Margin" Value="0,3,10,3" />
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Button Style="{StaticResource buttonStyle1}" Content="Binding1" Click="Binding1_Click" />
+            <Button Style="{StaticResource buttonStyle1}" Content="Binding2" Click="Binding2_Click" />
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1"
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center">
+
+            <Button x:Name="Button" Click="ClickHandler" Content="Start!" />
+
+        </StackPanel>
+    </Grid>
+</Page>

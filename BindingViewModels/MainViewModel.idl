@@ -1,0 +1,26 @@
+import "Person.idl";
+
+namespace BindingViewModels
+{
+    [default_interface]
+    runtimeclass MainViewModel : Windows.UI.Xaml.DependencyObject, Windows.UI.Xaml.Data.INotifyPropertyChanged
+    {
+		MainViewModel();
+
+		void Enter(Windows.UI.Xaml.Controls.Page page);
+		void GoHome();
+
+		void StartTimer();
+		void ResetTimer();
+		Int32 Count { get; };
+
+
+		Windows.Foundation.Collections.IVector<IInspectable> Persons{ get; };
+
+		Person CurrentPerson;
+		IInspectable SelectedPerson;
+
+		void NewPerson();
+		void RemovePerson();
+    }
+}

@@ -1,0 +1,18 @@
+namespace BindingViewModels
+{
+	[default_interface]
+	runtimeclass Person : Windows.UI.Xaml.Data.INotifyPropertyChanged
+	{
+		Person();
+		Person(String firstName, String lastName, Int32 age);
+
+		String FirstName;
+		String LastName;
+		Int32 Age;
+
+		void SetAge(String age);
+		String GetAge();
+
+		String ToString();
+	}
+}
